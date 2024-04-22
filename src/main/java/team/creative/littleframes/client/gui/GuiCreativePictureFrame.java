@@ -137,22 +137,22 @@ public class GuiCreativePictureFrame extends GuiLayer {
             nbt.putByte("posX", (byte) buttonPosX.getState());
             nbt.putByte("posY", (byte) buttonPosY.getState());
             
-            nbt.putFloat("rotation", (float) rotation.value);
+            nbt.putFloat("rotation", (float) rotation.getValue());
             
             nbt.putBoolean("flipX", flipX.value);
             nbt.putBoolean("flipY", flipY.value);
             nbt.putBoolean("visibleFrame", visibleFrame.value);
             nbt.putBoolean("bothSides", bothSides.value);
             
-            nbt.putInt("render", (int) renderDistance.value);
+            nbt.putInt("render", (int) renderDistance.getValue());
             
-            nbt.putFloat("transparency", (float) transparency.value);
-            nbt.putFloat("brightness", (float) brightness.value);
+            nbt.putFloat("transparency", (float) transparency.getValue());
+            nbt.putFloat("brightness", (float) brightness.getValue());
             
             nbt.putBoolean("loop", loop.value);
-            nbt.putFloat("volume", (float) volume.value);
-            nbt.putFloat("min", min.getValue());
-            nbt.putFloat("max", max.getValue());
+            nbt.putFloat("volume", (float) volume.getValue());
+            nbt.putFloat("min", min.getIntValue());
+            nbt.putFloat("max", max.getIntValue());
             
             nbt.putString("url", url.getText());
             nbt.putFloat("x", Math.max(0.1F, (float) sizeX.getValue()));

@@ -88,15 +88,15 @@ public class GuiLittlePictureFrame extends GuiLayer {
             
             nbt.putInt("fit", fit.getState());
             
-            nbt.putInt("render", (int) renderDistance.value);
+            nbt.putInt("render", (int) renderDistance.getValue());
             
-            nbt.putFloat("transparency", (float) transparency.value);
-            nbt.putFloat("brightness", (float) brightness.value);
+            nbt.putFloat("transparency", (float) transparency.getValue());
+            nbt.putFloat("brightness", (float) brightness.getValue());
             
             nbt.putBoolean("loop", loop.value);
-            nbt.putFloat("volume", (float) volume.value);
-            nbt.putFloat("min", min.getValue());
-            nbt.putFloat("max", max.getValue());
+            nbt.putFloat("volume", (float) volume.getValue());
+            nbt.putFloat("min", min.getIntValue());
+            nbt.putFloat("max", max.getIntValue());
             
             nbt.putString("url", url.getText());
             
