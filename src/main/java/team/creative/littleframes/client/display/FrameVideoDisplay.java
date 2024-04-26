@@ -4,7 +4,8 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.srrapero720.watermedia.api.WaterMediaAPI;
+import me.srrapero720.watermedia.api.math.MathAPI;
+import me.srrapero720.watermedia.api.player.PlayerAPI;
 import me.srrapero720.watermedia.api.player.SyncVideoPlayer;
 import net.minecraft.client.Minecraft;
 import team.creative.creativecore.client.CreativeCoreClient;
@@ -37,7 +38,7 @@ public class FrameVideoDisplay extends FrameDisplay {
     }
     
     public static FrameDisplay createVideoDisplay(Vec3d pos, String url, float volume, float minDistance, float maxDistance, boolean loop) {
-        if (WaterMediaAPI.vlc_isReady()) {
+        if (PlayerAPI.isReady()) {
             FrameVideoDisplay display = new FrameVideoDisplay(pos, url, volume, minDistance, maxDistance, loop);
             OPEN_DISPLAYS.add(display);
             return display;
@@ -155,7 +156,7 @@ public class FrameVideoDisplay extends FrameDisplay {
     public void pause(String url, float volume, float minDistance, float maxDistance, boolean playing, boolean loop, int tick) {
         if (player == null)
             return;
-        player.seekTo(WaterMediaAPI.math_ticksToMillis(tick));
+        player.seekTo(MathAPI.tickToMs(tick));
         player.pause();
     }
     
@@ -163,7 +164,7 @@ public class FrameVideoDisplay extends FrameDisplay {
     public void resume(String url, float volume, float minDistance, float maxDistance, boolean playing, boolean loop, int tick) {
         if (player == null)
             return;
-        player.seekTo(WaterMediaAPI.math_ticksToMillis(tick));
+        player.seekTo(MathAPI.tickToMs(tick));
         player.play();
     }
     
