@@ -102,7 +102,7 @@ dependencies {
     minecraftLibrary fg.deobf("org.embeddedt:embeddium-1.20.1:0.3.20-git-b21cfd8+mc1.20.1")
 
     // DEPENDENCIES
-    implementation "com.github.SrRapero720.watermedia:build:${watermedia_version}"
+    implementation "com.github.WaterMediaTeam.watermedia:build:${watermedia_version}"
     implementation project(':CreativeCore')
     implementation project(':LittleTiles')
 }
