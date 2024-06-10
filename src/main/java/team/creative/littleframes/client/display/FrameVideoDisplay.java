@@ -58,7 +58,7 @@ public class FrameVideoDisplay extends FrameDisplay {
         super();
         this.pos = pos;
 
-        player = new SyncVideoPlayer(Minecraft.getInstance(), ByteBuffer::allocateDirect);
+        player = new SyncVideoPlayer(Minecraft.getInstance());
         float tempVolume = getVolume(volume, minDistance, maxDistance);
         player.setVolume((int) tempVolume);
         lastSetVolume = tempVolume;
