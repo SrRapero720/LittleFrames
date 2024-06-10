@@ -91,7 +91,7 @@ dependencies {
 
     // TEST
     minecraftLibrary fg.deobf("curse.maven:oculus-581495:5299671")
-    minecraftLibrary fg.deobf("org.embeddedt:embeddium-1.20.1:0.3.20-git-f06b0e8+mc1.19.2")
+    minecraftLibrary fg.deobf("org.embeddedt:embeddium-1.19.2:0.3.20-git-f06b0e8+mc1.19.2")
 
     // DEPENDENCIES
     implementation "com.github.WaterMediaTeam.watermedia:build:${watermedia_version}"
